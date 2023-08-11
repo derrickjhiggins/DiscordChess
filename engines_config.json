@@ -1,0 +1,19 @@
+{
+    "engines": {
+        "Stockfish": {
+            "name": "Stockfish",
+            "path": "./engines/stockfish/16/bin/stockfish",
+            "ELO":  "3600+"
+        },
+        "Komodo 13": {
+            "name": "Komodo 13",
+            "path": "./engines/komodo-13/OSX/komodo-13.02-64-bmi2-osx",
+            "ELO": "3350"
+        },
+        "Supra 28": {
+            "name": "Supra 28",
+            "path": "./engines/Supra-28/Supra-28.0_Mac_Intel",
+            "ELO": "1500"
+        }
+    }
+}

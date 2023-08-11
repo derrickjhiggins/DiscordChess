@@ -1,0 +1,8 @@
+Valid command options:
+
+$help : view help menu.
+$restart : restart the match.
+$board: reprint the current board.
+$legal_moves : print a list of the current valid san moves.
+
+Legal moves: Moves must be entered in strategic algebra notation (san). You can use the $legal_moves command to see a list of valid san moves for the current turn. For more information on san, please visit
