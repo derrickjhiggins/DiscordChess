@@ -14,7 +14,7 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
 
             # get best move
             if evaluation[0] > maxEval[0]:
-                maxEval = evaluation
+                maxEval = evaluation[0], move
             alpha = max(alpha, evaluation[0])
             if beta <= alpha:
                 break
@@ -28,7 +28,7 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
             boardCopy.push(move)
             evaluation = minimax(boardCopy, depth - 1, alpha, beta, True)
             if evaluation[0] < minEval[0]:
-                minEval = evaluation
+                minEval = evaluation[0], move
             beta = min(beta, evaluation[0])
             if beta <= alpha:
                 break
