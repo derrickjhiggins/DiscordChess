@@ -143,7 +143,7 @@ piece_values = {
     6: (20000, K_positional_white, K_positional_black)
 }
 
-def get_board_score():
+def get_board_score(board):
     """
     Returns the cummulative score of all pieces on the board.
     Positive score indicates white advantage.
@@ -156,13 +156,13 @@ def get_board_score():
     for square in chess.SQUARES:
         if board.piece_at(square) is not None:
             if board.piece_at(square).color:
-                white_score += get_piece_score(square, True)
+                white_score += get_piece_score(board, square, True)
             else:
-                black_score += get_piece_score(square, False)
+                black_score += get_piece_score(board, square, False)
 
     return white_score - black_score
 
-def get_piece_score(square, color):
+def get_piece_score(board, square, color):
     """
     Gets the individual score of a piece on the board, accounting for
     the pieces score and positional score.
@@ -187,16 +187,16 @@ def get_piece_score(square, color):
 if __name__ == "__main__":
     board = chess.Board()
     board.push_san('d4')
-    print(get_board_score())
+    print(get_board_score(board))
     board.push_san('e5')
-    print(get_board_score())
+    print(get_board_score(board))
     board.push_san('dxe5')
-    print(get_board_score()) # white captures black pawn
+    print(get_board_score(board)) # white captures black pawn
     board.push_san('Qh4')
-    print(get_board_score())
+    print(get_board_score(board))
     board.push_san('g3')
-    print(get_board_score())
+    print(get_board_score(board))
     board.push_san('a6')
-    print(get_board_score())
+    print(get_board_score(board))
     board.push_san('gxh4')
-    print(get_board_score()) # white captures black queen
+    print(get_board_score(board)) # white captures black queen
