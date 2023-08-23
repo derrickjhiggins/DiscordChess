@@ -1,7 +1,10 @@
 from evaluation import get_board_score
 import chess
+calls = 0
 
 def minimax(board, depth, alpha, beta, maximizingPlayer):
+    global calls
+    calls += 1
     if depth == 0 or board.is_checkmate() or board.is_stalemate():
         return get_board_score(board), None
 
@@ -38,8 +41,17 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
 
 if __name__ == "__main__":
     board = chess.Board()
-    board.push_san('d4')
-    board.push_san('d6')
-    board.push_san('e4')
-    move = minimax(board, 2, float('-inf'), float('inf'), False)
-    print(move)
+    turn = 0
+    while not (board.is_checkmate() or board.is_stalemate() or board.is_fivefold_repetition()):
+        if turn % 2 == 0:
+            move = minimax(board, 1, float('-inf'), float('inf'), True)
+            print(move)
+            board.push(move[1])
+        else:
+            move = minimax(board, 3, float('-inf'), float('inf'), False)
+            print(move)
+            board.push(move[1])
+        print(board)
+        print(calls)
+        turn += 1
+    print(board.outcome())
