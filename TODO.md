@@ -1,15 +1,15 @@
 # TODO List
 
-A list of items to be completed for my project. Strikethrough indicates task completed.
+A list of items to be completed for my project.
 
 ## General:
-- ~~Allow user to select engine: set engine to correct engine path.~~
-- ~~Integrate minimax into discord bot.~~
+- ~~Allow user to select engine: set engine to correct engine path.~~ COMPLETED
+- ~~Integrate minimax into discord bot.~~ COMPLETED
 - Test gameplay on discord: Host and open to other users?
 
 ## Minimax:
-- ~~Test that minimax move is same with and without pruning.~~
-- ~~Integrate minimax move selection into bot gameplay.~~
+- ~~Test that minimax move is same with and without pruning.~~ COMPLETED
+- ~~Integrate minimax move selection into bot gameplay.~~ COMPLETED
 - Test that optimal move is generated correctly.
 - Update evaluation function to priotize moves leading to checkmate.
 
