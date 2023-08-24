@@ -8,7 +8,7 @@ A list of items to be completed for my project.
     - Test gameplay on discord: Host and open to other users?
 
 ## Minimax:
-    ~~- Test that minimax move is same with and without pruning.~~ COMPLETED
+    - ~~Test that minimax move is same with and without pruning.~~ COMPLETED
     ~~- Integrate minimax move selection into bot gameplay.~~ COMPLETED
     - Test that optimal move is generated correctly.
     - Update evaluation function to priotize moves leading to checkmate.
