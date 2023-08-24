@@ -183,20 +183,3 @@ def get_piece_score(board, square, color):
     pos = (square // 8, square % 8)
     score = vals[0] + vals[color][pos[0]][pos[1]]
     return score
-
-if __name__ == "__main__":
-    board = chess.Board()
-    board.push_san('d4')
-    print(get_board_score(board))
-    board.push_san('e5')
-    print(get_board_score(board))
-    board.push_san('dxe5')
-    print(get_board_score(board)) # white captures black pawn
-    board.push_san('Qh4')
-    print(get_board_score(board))
-    board.push_san('g3')
-    print(get_board_score(board))
-    board.push_san('a6')
-    print(get_board_score(board))
-    board.push_san('gxh4')
-    print(get_board_score(board)) # white captures black queen

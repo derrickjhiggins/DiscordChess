@@ -20,7 +20,7 @@
     "Minimax": {
         "name": "Minimax",
         "emoji": "🤖",
-        "path": "./engines/minimax",
+        "path": "minimax",
         "ELO": "Unknown"
     }
 }

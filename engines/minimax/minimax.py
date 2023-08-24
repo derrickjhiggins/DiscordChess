@@ -1,4 +1,4 @@
-from evaluation import get_board_score
+from .evaluation import get_board_score
 import chess
 calls = 0
 
