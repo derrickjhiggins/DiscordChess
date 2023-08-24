@@ -46,11 +46,10 @@ Follow these steps to set up and use the Discord Chess Bot on your server.
 
 ### Usage
 
-1. Select your engine to start a new game.
+1. Use `$play` to select your engine to and begin a new match.
 2. Make your moves using standard algebraic notation (e.g., `e4` or `Nc3`).
 3. The bot will provide responses and continue the game.
 4. Use `$help` to access the list of available commands and their usage.
-
 
 ## Contact
 
