@@ -3,15 +3,15 @@
 A list of items to be completed for my project.
 
 ## General:
-    - Allow user to select engine: set engine to correct engine path
-    - test gameplay on discord: open to other users?
-    - Integrate minimax into discord bot
+    ~~- Allow user to select engine: set engine to correct engine path~~ COMPLETED
+    ~~- Integrate minimax into discord bot~~ COMPLETED
+    - Test gameplay on discord: Host and open to other users?
 
 ## Minimax:
-    - Test that minimax move is same with and without pruning.
+    ~~- Test that minimax move is same with and without pruning.~~ COMPLETED
+    ~~- Integrate minimax move selection into bot gameplay.~~ COMPLETED
     - Test that optimal move is generated correctly.
-    - Integrate minimax move selection into bot gameplay.
-    - Update evaluation function to priotize moves leading to checkmate
+    - Update evaluation function to priotize moves leading to checkmate.
 
 ## Negamax:
     - Update minimax to negamax?
