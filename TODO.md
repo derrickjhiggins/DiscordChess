@@ -3,8 +3,8 @@
 A list of items to be completed for my project. Strikethrough indicates task completed.
 
 ## General:
-- ~~ Allow user to select engine: set engine to correct engine path~~
-- ~~ Integrate minimax into discord bot~~
+- ~~Allow user to select engine: set engine to correct engine path.~~
+- ~~Integrate minimax into discord bot.~~
 - Test gameplay on discord: Host and open to other users?
 
 ## Minimax:
@@ -14,7 +14,7 @@ A list of items to be completed for my project. Strikethrough indicates task com
 - Update evaluation function to priotize moves leading to checkmate.
 
 ## Negamax:
-    - Update minimax to negamax?
+- Update minimax to negamax?
 
 ## Docstrings:
 - All
