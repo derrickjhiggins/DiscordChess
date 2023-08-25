@@ -160,6 +160,12 @@ def get_board_score(board):
             else:
                 black_score += get_piece_score(board, square, False)
 
+            # check for checkmate
+            if board.is_checkmate() and board.outcome().winner:
+                white_score *= 10
+            elif board.is_checkmate():
+                black_score *= 10        
+
     return white_score - black_score
 
 def get_piece_score(board, square, color):
