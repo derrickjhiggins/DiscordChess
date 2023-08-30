@@ -7,6 +7,7 @@ Welcome to the Discord Chess Bot! This bot enables users to play chess against v
 ## Table of Contents
 
 - [Overview](#overview)
+- [Demo](#demo)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -17,6 +18,9 @@ Welcome to the Discord Chess Bot! This bot enables users to play chess against v
 ## Overview
 
 The Discord Chess Bot is designed to provide users with an engaging chess-playing experience directly within a Discord server. Whether you're a beginner looking for practice or an experienced player seeking a challenge, this bot offers a variety of chess engines to test your skills against.
+
+## Demo
+![Demo GIF](images/DiscordChessDemo.gif)
 
 ## Features
 
