@@ -2,7 +2,7 @@
 
 Welcome to the Discord Chess Bot! This bot enables users to play chess against various chess engines, including Stockfish, Komodo, Supra, and a custom Minimax-based chess AI.
 
-![Chess GIF](images/DiscordChessDemo.gif)
+![Chess GIF](images/chess-chesscom.gif)
 
 ## Table of Contents
 
