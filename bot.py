@@ -5,8 +5,8 @@ import time
 import asyncio
 import json
 from dotenv import load_dotenv
-from chess_functions import *
-from engines.minimax.minimax import minimax
+from src.chess_functions import *
+from src.engines.minimax.minimax import minimax
 
 load_dotenv()
 intents = discord.Intents.default()
@@ -41,7 +41,7 @@ async def on_message(message):
             enginePath = ''
             await message.channel.send("Select an engine to play against:")
             engine_selection_msg, emojis = '', []
-            with open("engines_config.json", "r") as config_file:
+            with open("./src/engines/engines_config.json", "r") as config_file:
                 chess_engines = json.load(config_file)
 
                 # get engine data
@@ -57,7 +57,7 @@ async def on_message(message):
 
 		# show help commands
         elif user_message == "$help":
-            with open("help.txt", 'r') as help_file:
+            with open("./src/engines/help.txt", 'r') as help_file:
                 contents = help_file.read()
                 hyperlink = "<https://en.wikipedia.org/wiki/Algebraic_notation_(chess)>"
                 await message.channel.send(f"{contents} [here]({hyperlink}).")
@@ -106,7 +106,7 @@ async def on_reaction_add(reaction, user):
     emoji = reaction.emoji
 
     if channel == "chess":
-        with open("engines_config.json", "r") as config_file:
+        with open("./src/engines/engines_config.json", "r") as config_file:
             chess_engines = json.load(config_file)
 
             selected_engine = None
