@@ -42,9 +42,12 @@ Follow these steps to set up and use the Discord Chess Bot on your server.
 - A Discord account
 - Permissions to add bots to a server you manage
 
+### Invite Link
+https://discord.com/api/oauth2/authorize?client_id=1136113670053711956&permissions=84992&scope=bot
+
 ### Installation
 
-1. Invite the bot to your server using the provided invite link.
+1. Invite the bot to your server using the provided invite link above.
 2. Set up the desired configuration and permissions for the bot.
 3. The bot will join the server and be ready to use.
 
