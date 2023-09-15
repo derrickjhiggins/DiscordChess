@@ -6,6 +6,8 @@ A list of items to be completed for my project.
 - ~~Allow user to select engine: set engine to correct engine path.~~ ✅
 - ~~Integrate minimax into discord bot.~~ ✅
 - Test gameplay on discord: Host and open to other users?
+- Update engine executables to Linux for railway.app. (stockfish already completed)
+- Store engine executables elsewhere than github repo?
 
 ## Minimax:
 - ~~Test that minimax move is same with and without pruning.~~ ✅
