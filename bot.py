@@ -7,6 +7,7 @@ import json
 from dotenv import load_dotenv
 from src.chess_functions import *
 from src.engines.minimax.minimax import minimax
+import platform
 
 load_dotenv()
 intents = discord.Intents.default()
@@ -14,13 +15,15 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 token = os.getenv('TOKEN')
+operating_system = platform.platform()
 
 board, enginePath = None, ''
 user_selections = {}
 
 @client.event
 async def on_ready():
-	print(f'We have logged in as {client.user}')
+    print(f'We have logged in as {client.user}')
+    print(operating_system)
 
 @client.event
 async def on_message(message):
