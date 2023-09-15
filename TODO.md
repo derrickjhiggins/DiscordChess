@@ -8,6 +8,7 @@ A list of items to be completed for my project.
 - Test gameplay on discord: Host and open to other users?
 - Update engine executables to Linux for railway.app. (stockfish already completed)
 - Store engine executables elsewhere than github repo?
+- Handle concurrent chess matches across multiple separate users
 
 ## Minimax:
 - ~~Test that minimax move is same with and without pruning.~~ ✅
