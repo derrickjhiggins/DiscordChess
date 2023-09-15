@@ -9,6 +9,7 @@ A list of items to be completed for my project.
 - Update engine executables to Linux for railway.app. (stockfish already completed)
 - Store engine executables elsewhere than github repo?
 - Handle concurrent chess matches across multiple separate users
+- Add UI for smoother gameplay (possible on discord?)
 
 ## Minimax:
 - ~~Test that minimax move is same with and without pruning.~~ ✅
