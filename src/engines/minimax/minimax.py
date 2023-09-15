@@ -48,7 +48,7 @@ if __name__ == "__main__":
             print(move)
             board.push(move[1])
         else:
-            move = minimax(board, 3, float('-inf'), float('inf'), False)
+            move = minimax(board, 4, float('-inf'), float('inf'), False)
             print(move)
             board.push(move[1])
         print(board)
