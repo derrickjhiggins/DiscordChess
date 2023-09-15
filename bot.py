@@ -83,7 +83,7 @@ async def on_message(message):
 				
 				# engine to move
                 if enginePath == "minimax": # minimax engine move
-                    engineMove = minimax(board, 4, float('-inf'), float('inf'), False)
+                    engineMove = minimax(board, 3, float('-inf'), float('inf'), False)
                     board.push(engineMove[1])
                 else: # other engine move
                     engineMove = await engine_play(enginePath, board)
