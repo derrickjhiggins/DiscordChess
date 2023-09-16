@@ -42,7 +42,7 @@ async def on_message(message):
             board = chess.Board()
             user_selections.pop(message.author.id, None)
             enginePath = ''
-            await message.channel.send("Select an engine to play against:")
+            await message.channel.send("Select an engine to play against by clicking an emoji:")
             engine_selection_msg, emojis = '', []
             with open("./src/engines/engines_config.json", "r") as config_file:
                 chess_engines = json.load(config_file)
