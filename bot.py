@@ -80,6 +80,9 @@ async def on_message(message):
 		# attempted player move (not minimax)
         else:
             try:
+                print(user_message)
+                user_message = user_message.lower()
+                print(user_message)
                 board.push_san(user_message)
                 await display_board(board, message)
                 await notify_checks(board, message)
