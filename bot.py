@@ -23,7 +23,7 @@ user_selections = {}
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
-    print(operating_system)
+    print(f"Operating system: {operating_system}")
 
 @client.event
 async def on_message(message):
@@ -80,9 +80,7 @@ async def on_message(message):
 		# attempted player move (not minimax)
         else:
             try:
-                print(user_message)
                 user_message = user_message.lower()
-                print(user_message)
                 board.push_san(user_message)
                 await display_board(board, message)
                 await notify_checks(board, message)
