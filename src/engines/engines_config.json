@@ -5,10 +5,10 @@
         "path": "./src/engines/stockfish/stockfish-ubuntu-x86-64-avx2",
         "ELO":  "3600+"
     },
-    "Komodo 13": {
+    "Komodo 14": {
         "name": "Komodo 14",
         "emoji": "🐉",
-        "path": "./src/engines/komodo-14/Linux/komodo-14.1-linux",
+        "path": "./src/engines/komodo-14/Linux/komodo-14.1-linux-bmi2",
         "ELO": "3350"
     },
     "Supra 28": {
