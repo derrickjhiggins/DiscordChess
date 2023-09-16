@@ -6,15 +6,15 @@
         "ELO":  "3600+"
     },
     "Komodo 13": {
-        "name": "Komodo 13",
+        "name": "Komodo 14",
         "emoji": "🐉",
-        "path": "./src/engines/komodo-13/OSX/komodo-13.02-64-bmi2-osx",
+        "path": "./src/engines/komodo-14/Linux/komodo-14.1-linux",
         "ELO": "3350"
     },
     "Supra 28": {
         "name": "Supra 28",
         "emoji": "🚘",
-        "path": "./src/engines/Supra-28/Supra-28.0_Mac_Intel",
+        "path": "./src/engines/Supra-28_Linux/Supra-28.0_Linux_x64",
         "ELO": "1500"
     },
     "Minimax": {
