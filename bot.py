@@ -127,6 +127,7 @@ async def on_reaction_add(reaction, user):
             if selected_engine:
                 enginePath = chess_engines[selected_engine]["path"]
                 matches[user.id].append(enginePath)
+                print(matches[user.id])
                 await reaction.message.channel.send(f"You selected {selected_engine} as the engine to play against.")
                 await display_board(board, reaction.message)
             else:
