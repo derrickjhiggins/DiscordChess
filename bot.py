@@ -81,7 +81,9 @@ async def on_message(message):
 		# attempted player move (not minimax)
         else:
             board = matches[message.author.id][0]
+            print(board)
             enginePath = matches[message.author.id][1]
+            print(enginePath)
             try:
                 user_message = user_message.lower()
                 board.push_san(user_message)
