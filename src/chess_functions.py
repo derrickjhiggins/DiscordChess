@@ -17,7 +17,8 @@ async def notify_checks(board, message):
         return
 	
 async def engine_play(enginePath, board) -> None:
-    print(enginePath, board)
+    print(enginePath)
+    print(type(enginePath))
     transport, engine = await chess.engine.popen_uci(enginePath)
     result = await engine.play(board, chess.engine.Limit(time=0.1))
     await engine.quit()
