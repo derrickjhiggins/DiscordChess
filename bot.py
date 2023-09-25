@@ -18,7 +18,16 @@ token = os.getenv('TOKEN')
 operating_system = platform.platform()
 matches = {} # userid: [board, selectedEnginePath]
 
-script_path = os.path.abspath(__file__)
+file_path = '/app/src/engines/komodo-14/Linux/komodo-14.1-linux'
+
+new_permissions = 0o755
+
+try:
+    # Change the file permissions
+    os.chmod(file_path, new_permissions)
+    print(f"Permissions for {file_path} have been changed to {new_permissions:o}")
+except OSError as e:
+    print(f"Error: {e}")
 
 print(f"The script is located at: {script_path}")
 
