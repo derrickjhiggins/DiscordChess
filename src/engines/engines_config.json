@@ -2,7 +2,7 @@
     "Stockfish": {
         "name": "Stockfish",
         "emoji": "🐟",
-        "path": "./src/engines/stockfish/stockfish-ubuntu-x86-64-avx2",
+        "path": "./src/engines/stockfish/stockfish-ubuntu-x86-64-modern",
         "ELO":  "3600+"
     },
     "Komodo 14": {
