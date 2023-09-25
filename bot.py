@@ -33,7 +33,7 @@ async def on_message(message):
     user_message = str(message.content)
     
     if message.author.id in matches:
-        board = matchces[message.author.id][0]
+        board = matches[message.author.id][0]
 
 	################## GAME LOGIC ######################
     if channel == "chess":
