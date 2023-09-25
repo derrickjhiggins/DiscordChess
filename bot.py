@@ -16,9 +16,7 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 token = os.getenv('TOKEN')
 operating_system = platform.platform()
-
-board, enginePath = None, ''
-user_selections = {}
+matches = {} # userid: [board, selectedEnginePath]
 
 @client.event
 async def on_ready():
@@ -33,14 +31,18 @@ async def on_message(message):
     username = str(message.author).split("#")[0]
     channel = str(message.channel.name)
     user_message = str(message.content)
+    
+    if message.author.id in matches:
+        board = matchces[message.author.id][0]
 
 	################## GAME LOGIC ######################
     if channel == "chess":
-        global board, enginePath
+        global enginePath
 
+        # reset current game 
         if user_message == "$play":
             board = chess.Board()
-            user_selections.pop(message.author.id, None)
+            matches[message.author.id] = [board]
             enginePath = ''
             await message.channel.send("Select an engine to play against by clicking an emoji:")
             engine_selection_msg, emojis = '', []
@@ -74,11 +76,12 @@ async def on_message(message):
             await message.channel.send(board.legal_moves)
 			
 		# no engine selected
-        elif not enginePath:
+        elif not matches[author.message.id][1]:
             await message.channel.send("Please select your engine first.")
 			
 		# attempted player move (not minimax)
         else:
+            enginePath = matches[author.message.id][1]
             try:
                 user_message = user_message.lower()
                 board.push_san(user_message)
@@ -100,10 +103,9 @@ async def on_message(message):
 
 @client.event
 async def on_reaction_add(reaction, user):
-    global enginePath
     if user == client.user:
         return
-    elif user.id in user_selections: # ensure only 1 emoji selected
+    elif user.id in matches: # ensure only 1 emoji selected
         return
 
     channel = str(reaction.message.channel.name)
@@ -121,7 +123,7 @@ async def on_reaction_add(reaction, user):
 
             if selected_engine:
                 enginePath = chess_engines[selected_engine]["path"]
-                user_selections[user.id] = selected_engine
+                matches[user.id][1] = enginePath
                 await reaction.message.channel.send(f"You selected {selected_engine} as the engine to play against.")
                 await display_board(board, reaction.message)
             else:
