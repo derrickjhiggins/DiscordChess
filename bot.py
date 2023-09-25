@@ -82,7 +82,6 @@ async def on_message(message):
         else:
             board = matches[message.author.id][0]
             enginePath = matches[message.author.id][1]
-            print(type(enginePath))
             try:
                 user_message = user_message.lower()
                 board.push_san(user_message)
@@ -94,7 +93,6 @@ async def on_message(message):
                     engineMove = minimax(board, 3, float('-inf'), float('inf'), False)
                     board.push(engineMove[1])
                 else: # other engine move
-                    print(enginePath)
                     engineMove = await engine_play(enginePath, board)
                     board.push(engineMove.move)
                 await display_board(board, message)
@@ -127,7 +125,6 @@ async def on_reaction_add(reaction, user):
             if selected_engine:
                 enginePath = chess_engines[selected_engine]["path"]
                 matches[user.id].append(enginePath)
-                print(matches[user.id])
                 await reaction.message.channel.send(f"You selected {selected_engine} as the engine to play against.")
                 await display_board(board, reaction.message)
             else:
