@@ -82,6 +82,7 @@ async def on_message(message):
         else:
             board = matches[message.author.id][0]
             enginePath = matches[message.author.id][1]
+            print(type(enginePath))
             try:
                 user_message = user_message.lower()
                 board.push_san(user_message)
