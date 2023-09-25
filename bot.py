@@ -18,6 +18,10 @@ token = os.getenv('TOKEN')
 operating_system = platform.platform()
 matches = {} # userid: [board, selectedEnginePath]
 
+script_path = os.path.abspath(__file__)
+
+print(f"The script is located at: {script_path}")
+
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
