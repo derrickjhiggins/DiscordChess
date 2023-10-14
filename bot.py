@@ -98,7 +98,9 @@ async def on_message(message):
             board = matches[message.author.id][0]
             enginePath = matches[message.author.id][1]
             try:
-                user_message = user_message.lower()
+                # capitalization correction for pawn movement
+                if len(user_message) == 2:
+                    user_message = user_message.lower()
                 board.push_san(user_message)
                 await display_board(board, message)
                 await notify_checks(board, message)
